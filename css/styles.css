@@ -49,7 +49,7 @@ img {
 /* Хедер */
 .header {
     border-bottom: 1px solid #e7e9fc;
-
+    padding: 24px 0;
 }
 
 .header-container {
@@ -58,6 +58,7 @@ img {
     align-items: center;
 
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -165,7 +166,7 @@ img {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
+    display: block;
 }
 
 .hero-button:hover,
@@ -175,13 +176,22 @@ img {
 
 /* Секція Features */
 
+section:nth-child(2) ul {
+    display: flex;
+    gap: 24px;
+    /* проміжки між пунктами */
+}
+
+section:nth-child(2) ul li {
+    flex-basis: calc((100% - 72px) / 4);
+    /* або width: calc((100% - 72px) / 4); */
+    /* flex-grow: 0;  можна додати, щоб не розтягувались */
+    flex-grow: 0;
+}
+
 .features-list {
     display: flex;
     gap: 24px;
-}
-
-.features-item {
-    flex-basis: calc((100% - 90px) / 4);
 }
 
 .features-title {
@@ -207,6 +217,10 @@ img {
 /* Секція Team */
 .team {
     background-color: #f4f4fd;
+}
+
+.team-container {
+    padding: 32px 0;
 }
 
 .section-title {
@@ -273,18 +287,21 @@ img {
     justify-content: center;
 }
 
+
 .portfolio-item {
     background-color: #ffffff;
     flex-basis: calc((100% - (24px * 2)) / 3);
     transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid #F4F4FD;
+    border: 1px solid #e7e9fc;
+    border-top: none;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    border-bottom: 2px solid #e2e8f0;
 }
 
 .portfolio-item:hover,
 .portfolio-item:focus-within {
     border: 1px solid #F4F4FD;
-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item img {
